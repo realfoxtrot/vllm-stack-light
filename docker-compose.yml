@@ -20,7 +20,6 @@ services:
       --enable-prefix-caching
       --trust-remote-code
       --limit-mm-per-prompt image=0
-          
     volumes:
       - vllm_cache:/root/.cache/huggingface
     environment:  
