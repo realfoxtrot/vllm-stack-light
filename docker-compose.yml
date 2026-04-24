@@ -17,11 +17,9 @@ services:
       --gpu-memory-utilization 0.90
       --kv-cache-dtype fp8
       --max-num-seqs 256
-      --max-num-batched-tokens 16384
       --enable-prefix-caching
-      --swap-space 16
       --trust-remote-code
-      --disable-log-requests
+      --limit-mm-per-prompt image=0
           
     volumes:
       - vllm_cache:/root/.cache/huggingface
