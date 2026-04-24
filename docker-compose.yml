@@ -16,10 +16,8 @@ services:
       --max-model-len 32768
       --gpu-memory-utilization 0.90
       --kv-cache-dtype fp8
-      --max-num-seqs 256
       --enable-prefix-caching
       --trust-remote-code
-      --limit-mm-per-prompt '{"image": 0}'
     volumes:
       - vllm_cache:/root/.cache/huggingface
     environment:  
@@ -27,7 +25,6 @@ services:
       - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}   
     ports:
       - "127.0.0.1:8000:8000" # Only accessible from this server
-    shm_size: 64g  
     restart: unless-stopped
 
   n8n:
