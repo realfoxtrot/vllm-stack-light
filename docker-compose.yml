@@ -10,7 +10,7 @@ services:
               count: all
               capabilities: [gpu]
     command: >        
-      --model google/gemma-4-26B-A4B-it
+      --model google/gemma-3-27b-it
       --quantization fp8
       --max-model-len 32768
       --gpu-memory-utilization 0.92
