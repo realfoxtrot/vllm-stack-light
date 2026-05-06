@@ -22,7 +22,7 @@ services:
       - HF_TOKEN=${HF_TOKEN}
       - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}   
     ports:
-      - "127.0.0.1:8000:8000" # Only accessible from this server
+      - "8000:8000" # Only accessible from this server
     shm_size: "16g"
     restart: unless-stopped
 
